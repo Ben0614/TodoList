@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/toDoList.css">
+</head>
+
+<!-- 
+1.文本框裡面輸入內容，按下enter就可以生成待辦事項
+2.點擊待辦事項複選框，就可以把當前數據添加到已完成事項裡面
+3.點擊已完成事項複選框，就可以把當前數據添加到待辦事項裡面
+4.但是本頁面內容刷新頁面不會丟失 -->
+
+<body>
+
+    <header>
+        <section>
+            <label for="title">ToDoList</label>
+            <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" />
+            <!-- required 可自動幫我們偵測 input 是否為空值,如為空值則無法送出 -->
+            <!-- autocomplete 使用者輸入資料時，提示相關字眼 -->
+
+        </section>
+    </header>
+    <section>
+        <!-- 正在進行的事項 -->
+        <!-- span內為進行中事項的筆數，輸入時自動生成-->
+        <h2>進行中 <span id="todocount"></span></h2>
+        <!-- 進行中的事項，輸入時自動生成 -->
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+
+        <!-- 已完成的事項 -->
+        <!-- span內為已完成事項的筆數-->
+        <h2>已完成 <span id="donecount"></span></h2>
+        <!-- 已完成的事項 -->
+        <ul id="donelist">
+
+        </ul>
+    </section>
+    <footer>
+        Copyright &copy; 2014 todolist.cn
+    </footer>
+
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/toDoList.js"></script>
+</body>
+
+</html>
